@@ -15,9 +15,9 @@
   --color-signal: var(--signal);
   --color-signal-glow: var(--signal-glow);
   
-  --font-sans: var(--font-mono);
+  --font-sans: var(--font-sans);
   --font-serif: "Instrument Serif", serif;
-  --font-mono: var(--font-mono);
+  --font-mono: var(--font-sans);
   
   /* Shadows - Adjusted for Light Mode visibility */
   --shadow-bevel: -1px -1px 0px rgba(255, 255, 255, 0.8), 1px 1px 0px rgba(0, 0, 0, 0.2);

@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono } from "next/font/google";
+import { Archivo } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const ibmMono = IBM_Plex_Mono({
-  variable: "--font-mono",
+const archivo = Archivo({
+  variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +26,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`${ibmMono.variable} antialiased bg-chassis text-primary selection:bg-signal selection:text-white`}
+        className={`${archivo.variable} antialiased bg-chassis text-primary selection:bg-signal selection:text-white`}
       >
         <ThemeProvider
           attribute="class"
