@@ -105,27 +105,6 @@ export function AppPreviewGraphic() {
                       strokeWidth={1}
                       stroke="var(--bg-surface)"
                       animationDuration={750}
-                      label={({ cx, cy, midAngle, innerRadius, outerRadius, value, index }) => {
-                        const RADIAN = Math.PI / 180;
-                        const radius = outerRadius * 1.4;
-                        const x = cx + radius * Math.cos(-midAngle * RADIAN);
-                        const y = cy + radius * Math.sin(-midAngle * RADIAN);
-                        
-                        return (
-                          <text 
-                            x={x} 
-                            y={y} 
-                            fill={pieData[index].color} 
-                            textAnchor={x > cx ? 'start' : 'end'} 
-                            dominantBaseline="central"
-                            fontSize="6"
-                            fontWeight="500"
-                          >
-                            {`${value}%`}
-                          </text>
-                        );
-                      }}
-                      labelLine={{ stroke: 'var(--tertiary)', strokeWidth: 0.5, opacity: 0.5 }}
                     >
                       {pieData.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={entry.color} />
