@@ -30,7 +30,7 @@ export function Hero() {
 
         {/* CTA Group */}
         <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
-          <Button size="lg" className="min-w-[200px] h-14 text-lg shadow-[0_4px_10px_rgba(234,88,12,0.2)] hover:shadow-[0_6px_15px_rgba(234,88,12,0.3)] transition-shadow">
+          <Button variant="default" size="default">
             JOIN THE WAITLIST
           </Button>
           

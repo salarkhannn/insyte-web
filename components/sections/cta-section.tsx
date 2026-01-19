@@ -17,8 +17,7 @@ export function CTASection() {
   return (
     <section className="relative py-24 md:py-32 bg-chassis">
       <div className="container mx-auto max-w-4xl px-6">
-        <div className="relative p-8 md:p-12 rounded-3xl bg-panel border border-primary/5 shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
-          <div className="absolute inset-0 bg-[linear-gradient(var(--grid-line)_1px,transparent_1px),linear-gradient(90deg,var(--grid-line)_1px,transparent_1px)] bg-[size:24px_24px] rounded-3xl opacity-50" />
+        <div className="relative md:p-12 p-8">
           
           <div className="relative z-10 text-center">
             <div className="inline-flex items-center gap-2 mb-6">

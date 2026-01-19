@@ -11,7 +11,7 @@ const features = [
 export function WhatInsyte() {
   return (
     <section className="relative py-24 md:py-32 bg-panel">
-      <div className="container mx-auto max-w-6xl px-6">
+      <div className="container mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
             <div className="inline-flex items-center gap-2 mb-6">

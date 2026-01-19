@@ -16,13 +16,6 @@ export function Navbar() {
     setMounted(true);
   }, []);
 
-  const navLinks = [
-    { name: "Principles", href: "#principles" },
-    { name: "Capabilities", href: "#capabilities" },
-    { name: "Workflow", href: "#workflow" },
-    { name: "Manifesto", href: "#manifesto" },
-  ];
-
   return (
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center pointer-events-none">
       <header className={cn(
@@ -44,15 +37,12 @@ export function Navbar() {
 
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-xs font-medium px-4 py-1.5 rounded-full transition-all hover:bg-black/5 dark:hover:bg-white/10 text-secondary hover:text-primary uppercase tracking-wider font-mono"
-            >
-              {link.name}
-            </Link>
-          ))}
+          <Link
+            href="/blog"
+            className="text-xs font-medium px-4 py-1.5 rounded-full transition-all hover:bg-black/5 dark:hover:bg-white/10 text-secondary hover:text-primary uppercase tracking-wider font-mono"
+          >
+            Blog
+          </Link>
         </nav>
 
         {/* Controls */}
@@ -73,7 +63,8 @@ export function Navbar() {
             <div className="h-4 w-[1px] bg-black/10 dark:bg-white/10 mx-1"></div>
 
           <Button 
-            className="h-8 px-4 rounded-full font-mono text-xs bg-[#ea580c] hover:bg-[#ea580c]/90 text-white border-none shadow-none"
+            variant="default"
+            className="h-9 px-6 font-mono text-xs rounded-full"
           >
             Get Started
           </Button>
