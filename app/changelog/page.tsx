@@ -2,25 +2,39 @@ import { GitCommit, Tag } from "@phosphor-icons/react/dist/ssr";
 
 const changes = [
   {
+    version: "v0.9.2",
+    date: "Jan 19, 2026",
+    title: "System & Export Capabilities",
+    description: "Added comprehensive project management with save/load functionality and data export options for CSV, Excel, and PDF. The app now supports full persistent workflows.",
+    badges: ["System", "Feature"]
+  },
+  {
+    version: "v0.9.1",
+    date: "Jan 15, 2026",
+    title: "Advanced Visualization Engine",
+    description: "Deployed the new visualization layer supporting 5 chart types including Bar, Line, Area, Pie, and Scatter, plus an interactive canvas view.",
+    badges: ["Visuals", "UI"]
+  },
+  {
     version: "v0.9.0",
-    date: "Jan 18, 2024",
-    title: "Major Performance Upgrade",
-    description: "Re-wrote the rendering engine to support 10M+ rows with 60fps scrolling. Added virtualized heavy data grid.",
-    badges: ["Performance", "Core"]
+    date: "Jan 10, 2026",
+    title: "Polars Processing Engine",
+    description: "Integrated the Polars-based backend for high-performance data processing. Handles filtering, aggregation, and transformations on large datasets with near-instant speed.",
+    badges: ["Performance", "Backend"]
   },
   {
     version: "v0.8.5",
-    date: "Jan 10, 2024",
-    title: "New AI Chat Interface",
-    description: "Introduced the new context-aware AI Assistant. It can now answer questions about your loaded datasets and generate charts automatically.",
-    badges: ["AI", "Feature"]
+    date: "Jan 05, 2026",
+    title: "AI Copilot Integration",
+    description: "Released the Groq-powered AI assistant. You can now ask natural language questions about your data to automatically generate queries and insights.",
+    badges: ["AI", "Innovation"]
   },
   {
     version: "v0.8.0",
-    date: "Dec 22, 2023",
-    title: "Private Beta Launch",
-    description: "Initial release for private beta testers. Includes basic CSV import, bar/line/scatter charts, and project saving.",
-    badges: ["Release"]
+    date: "Dec 20, 2025",
+    title: "MVP Foundation & Core Grid",
+    description: "Initial release of the PowerBI-inspired app shell, multi-format data ingestion (CSV, Excel, JSON), and the high-performance AG Grid table view.",
+    badges: ["Core", "Release"]
   }
 ];
 
@@ -46,9 +60,9 @@ export default function ChangelogPage() {
         <div className="relative border-l border-primary/10 ml-4 md:ml-0 md:pl-0 space-y-16">
             
           {changes.map((change, index) => (
-            <div key={change.version} className="relative flex flex-col md:flex-row gap-8 md:gap-16">
+            <div key={change.version} className="relative flex flex-col md:flex-row gap-8 md:gap-16 pl-8">
               {/* Timeline Dot */}
-              <div className="absolute -left-[5px] md:left-auto md:right-full md:mr-8 top-2 w-2.5 h-2.5 rounded-full bg-signal ring-4 ring-chassis" />
+              <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-signal ring-4 ring-chassis" />
               
               {/* Content */}
               <div className="flex-1">
