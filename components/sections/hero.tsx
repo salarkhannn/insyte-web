@@ -9,7 +9,7 @@ export function Hero() {
       
       <div className="container relative z-10 flex flex-col items-center text-center max-w-5xl px-6">
         {/* Status Indicator */}
-        <div className="mb-8 flex items-center gap-3 rounded-full border border-primary/5 bg-surface/50 px-4 py-1.5 backdrop-blur-sm shadow-[0_1px_2px_rgba(0,0,0,0.05),inset_0_0_0_1px_rgba(255,255,255,0.5)]">
+        <div className="mb-8 flex items-center gap-3 rounded-full border border-primary/5 bg-surface/50 px-4 py-1.5 backdrop-blur-sm]">
           <div className="h-2 w-2 rounded-full bg-signal animate-pulse shadow-[0_0_8px_var(--signal)]" />
           <span className="text-[11px] font-mono uppercase tracking-widest text-secondary font-bold">
             Pre-launch Protocol Active

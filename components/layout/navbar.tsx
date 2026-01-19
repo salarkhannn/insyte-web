@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sun, Moon } from "@phosphor-icons/react";
+import { Sun, Moon, GithubLogo } from "@phosphor-icons/react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
@@ -20,7 +20,7 @@ export function Navbar() {
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center pointer-events-none">
       <header className={cn(
         "pointer-events-auto h-12 rounded-2xl flex items-center justify-between px-2 pl-4 gap-6",
-        "border border-black/5 dark:border-white/10 shadow-lg backdrop-blur-md transition-all duration-300",
+        "border border-black/5 dark:border-white/5 shadow-sm backdrop-blur-md transition-all duration-300",
         // Floating Navbar Styling: Standard Theme (Light on Light, Dark on Dark)
         "bg-chassis/80", 
         "text-primary"
@@ -62,11 +62,21 @@ export function Navbar() {
             
             <div className="h-4 w-[1px] bg-black/10 dark:bg-white/10 mx-1"></div>
 
+            <a 
+              href="https://github.com/salarkhannn/insyte"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-secondary hover:text-primary"
+              aria-label="GitHub Repository"
+            >
+              <GithubLogo weight="bold" size={16} />
+            </a>
+
           <Button 
             variant="default"
             className="h-9 px-6 font-mono text-xs rounded-full"
           >
-            Get Started
+            Join Waitlist
           </Button>
         </div>
       </header>

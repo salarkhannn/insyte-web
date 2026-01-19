@@ -8,7 +8,7 @@ const personas = [
 
 export function Audience() {
   return (
-    <section className="relative py-24 md:py-32 bg-chassis">
+    <section className="relative py-24 bg-chassis">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-6">
