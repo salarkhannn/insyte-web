@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { GithubLogo } from "@phosphor-icons/react/dist/ssr";
 
 export function Footer() {
@@ -16,13 +17,21 @@ export function Footer() {
           {/* Brand Column */}
           <div className="col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 rounded-full bg-signal flex items-center justify-center shadow-md">
-                <div className="w-2.5 h-2.5 bg-white rounded-full" />
-              </div>
-              <span className="font-mono text-lg font-bold tracking-tight uppercase text-primary">
-                Insyte
-              </span>
-            </div>
+              <Image 
+                src="/logo-dark.svg" 
+                alt="Insyte" 
+                width={482} 
+                height={163} 
+                className="h-7 w-auto dark:hidden"
+              />
+              <Image 
+                src="/logo-light.svg" 
+                alt="Insyte" 
+                width={482} 
+                height={163} 
+                className="h-7 w-auto hidden dark:block"
+              />
+</div>
             <p className="text-sm text-secondary leading-relaxed max-w-xs">
               Next-generation analytics for professionals. Built for speed, depth, and clarity.
             </p>

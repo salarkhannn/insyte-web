@@ -9,8 +9,11 @@ const archivo = Archivo({
 });
 
 export const metadata: Metadata = {
-  title: "Insyte — AI-Powered Analytics",
+  title: "Insyte - AI-Powered Analytics",
   description: "Desktop-grade analytics for the modern era.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

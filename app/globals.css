@@ -44,7 +44,7 @@
   --tertiary: #a1a1aa;    /* soft low-contrast */
   
   /* Accent system — vibrant and confident */
-  --signal: #f97316;
+  --signal: #ec3c24;
   --signal-hover: #ea580c;
   --signal-glow: rgba(249, 115, 22, 0.1);
   
@@ -89,7 +89,7 @@
   --tertiary: #52525b;    /* subdued low-contrast */
   
   /* Accent system — vibrant but refined */
-  --signal: #f97316;
+  --signal: #ec3c24;
   --signal-hover: #fb923c;
   --signal-glow: rgba(249, 115, 22, 0.15);
   

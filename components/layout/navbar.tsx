@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { Sun, Moon, GithubLogo, List, X } from "@phosphor-icons/react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -19,7 +20,7 @@ export function Navbar() {
   return (
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center pointer-events-none px-3 sm:px-4">
       <header className={cn(
-        "pointer-events-auto relative w-full max-w-2xl h-12 rounded-2xl flex items-center justify-between gap-2 sm:gap-3 md:gap-4",
+        "pointer-events-auto relative w-full max-w-2xl h-12 rounded-full flex items-center justify-between gap-2 sm:gap-3 md:gap-4",
         "px-2 sm:px-3 md:px-4",
         "border border-black/5 dark:border-white/5 shadow-sm backdrop-blur-md transition-all duration-300",
         "bg-chassis/80", 
@@ -27,35 +28,47 @@ export function Navbar() {
       )}>
         {/* Logo Area */}
         <Link href="/" className="flex items-center gap-2 sm:gap-3 flex-shrink-0 min-w-0">
-          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-orange-600 flex items-center justify-center shadow-md flex-shrink-0">
-             <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-white rounded-full shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
-          </div>
-          <span className="font-mono text-sm sm:text-base font-bold tracking-tight uppercase truncate">
-            Insyte
-          </span>
-        </Link>
-
-        {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 flex-shrink-0">
-          <Link
-            href="/blog"
-            className="text-xs font-medium px-3 xl:px-4 py-1.5 rounded-full transition-all hover:bg-black/5 dark:hover:bg-white/10 text-secondary hover:text-primary uppercase tracking-wider font-mono"
-          >
-            Blog
-          </Link>
-          <Link
-            href="/changelog"
-            className="text-xs font-medium px-3 xl:px-4 py-1.5 rounded-full transition-all hover:bg-black/5 dark:hover:bg-white/10 text-secondary hover:text-primary uppercase tracking-wider font-mono"
-          >
-            Changelog
-          </Link>
-        </nav>
+          <Image 
+            src="/logo-dark.svg" 
+            alt="Insyte" 
+            width={482} 
+            height={163} 
+            className="h-5 w-auto sm:h-6 dark:hidden"
+            priority
+          />
+          <Image 
+            src="/logo-light.svg" 
+            alt="Insyte" 
+            width={482} 
+            height={163} 
+            className="h-5 w-auto sm:h-6 hidden dark:block"
+            priority
+          />
+</Link>
 
         {/* Spacer for pushing controls right */}
         <div className="flex-1 min-w-2"></div>
 
         {/* Controls */}
         <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+            {/* Desktop Navigation Links */}
+            <nav className="hidden lg:flex items-center gap-1 flex-shrink-0">
+              <Link
+                href="/blog"
+                className="text-xs font-medium px-3 xl:px-4 py-1.5 rounded-full transition-all hover:bg-black/5 dark:hover:bg-white/10 text-primary hover:text-primary uppercase tracking-wider font-mono"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/changelog"
+                className="text-xs font-medium px-3 xl:px-4 py-1.5 rounded-full transition-all hover:bg-black/5 dark:hover:bg-white/10 text-primary hover:text-primary uppercase tracking-wider font-mono"
+              >
+                Changelog
+              </Link>
+            </nav>
+
+            <div className="h-4 w-[1px] bg-black/10 dark:bg-white/10 hidden lg:block flex-shrink-0"></div>
+
             {/* Theme Toggle */}
             <button 
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -69,8 +82,6 @@ export function Navbar() {
               )}
             </button>
             
-            <div className="h-4 w-[1px] bg-black/10 dark:bg-white/10 hidden lg:block flex-shrink-0"></div>
-
             <a 
               href="https://github.com/salarkhannn/insyte"
               target="_blank"
