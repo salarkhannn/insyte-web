@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { StructuredData } from "@/components/structured-data";
 import { WaitlistProvider } from "@/components/waitlist-modal";
+import { Analytics } from "@vercel/analytics/react";
 
 const archivo = Archivo({
   variable: "--font-sans",
@@ -114,6 +115,7 @@ export default function RootLayout({
             {children}
           </WaitlistProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
