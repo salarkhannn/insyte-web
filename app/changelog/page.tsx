@@ -1,4 +1,20 @@
+import type { Metadata } from "next";
 import { GitCommit, Tag } from "@phosphor-icons/react/dist/ssr";
+
+export const metadata: Metadata = {
+  title: "Changelog",
+  description:
+    "Stay up to date with the latest improvements, fixes, and features added to Insyte. View our complete release history and version notes.",
+  alternates: {
+    canonical: "https://useinsyte.vercel.app/changelog",
+  },
+  openGraph: {
+    title: "Changelog | Insyte",
+    description:
+      "Latest improvements, fixes, and features added to Insyte desktop analytics.",
+    url: "https://useinsyte.vercel.app/changelog",
+  },
+};
 
 const changes = [
   {
@@ -40,10 +56,10 @@ const changes = [
 
 export default function ChangelogPage() {
   return (
-    <main className="min-h-screen pt-32 pb-24 bg-chassis">
-      <div className="container mx-auto max-w-3xl px-6">
+    <main id="main-content" className="min-h-screen pt-32 pb-24 bg-chassis">
+      <article className="container mx-auto max-w-3xl px-6">
         {/* Header */}
-        <div className="mb-20 text-center">
+        <header className="mb-20 text-center">
             <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-surface border border-primary/10">
                 <Tag size={12} className="text-signal" />
                 <span className="text-xs font-mono font-medium text-secondary">Release Notes</span>
@@ -54,7 +70,7 @@ export default function ChangelogPage() {
           <p className="text-lg text-secondary max-w-xl mx-auto">
             Stay up to date with the latest improvements, fixes, and features added to Insyte.
           </p>
-        </div>
+        </header>
 
         {/* Timeline */}
         <div className="relative border-l border-primary/10 ml-4 md:ml-0 md:pl-0 space-y-16">
@@ -89,7 +105,7 @@ export default function ChangelogPage() {
           ))}
 
         </div>
-      </div>
+      </article>
     </main>
   );
 }

@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Insyte
 
-## Getting Started
+Desktop analytics for data professionals who need speed, depth, and control.
 
-First, run the development server:
+**Website:** https://useinsyte.vercel.app
+
+## What is Insyte?
+
+Insyte is a desktop-native analytics application built for analysts and data teams who work with local data. It combines the analytical depth of tools like Tableau and Power BI with a modern, keyboard-driven workflow and AI-assisted querying.
+
+### Core Capabilities
+
+- **AI Copilot** — Ask questions in natural language, get charts and insights
+- **High-performance processing** — Polars-based backend handles large datasets
+- **Multiple visualization types** — Bar, Line, Area, Pie, Scatter, and more
+- **Multi-format import** — CSV, Excel, JSON with instant column inspection
+- **Project persistence** — Save complete sessions with sheets, visuals, and query history
+- **Export options** — CSV, Excel, PDF output
+
+### Architecture
+
+- Desktop app built with Tauri (Rust + Web)
+- Polars for data processing
+- React frontend with AG Grid
+- Local-first: your data stays on your machine
+
+## This Repository
+
+This repo contains the marketing website for Insyte.
+
+### Stack
+
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS 4
+
+### Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Production
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Status
 
-## Learn More
+Currently in private development. Join the waitlist at https://useinsyte.vercel.app for early access.
 
-To learn more about Next.js, take a look at the following resources:
+## Links
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Desktop App Repository](https://github.com/salarkhannn/insyte)
+- [Changelog](https://useinsyte.vercel.app/changelog)

@@ -51,6 +51,7 @@ export function CTASection() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
+                  aria-label="Email address for waitlist"
                   className="flex-1 h-12 px-4 rounded-xl bg-surface border border-primary/10 text-primary placeholder:text-tertiary focus:outline-none focus:ring-2 focus:ring-signal/30 focus:border-signal/50 font-sans"
                 />
                 <Button type="submit" className="h-12 px-6 whitespace-nowrap">

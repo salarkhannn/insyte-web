@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /_next/
+
+Sitemap: https://useinsyte.vercel.app/sitemap.xml
