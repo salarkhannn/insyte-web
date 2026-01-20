@@ -3,6 +3,7 @@ import { Archivo, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { StructuredData } from "@/components/structured-data";
+import { WaitlistProvider } from "@/components/waitlist-modal";
 
 const archivo = Archivo({
   variable: "--font-sans",
@@ -109,7 +110,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <WaitlistProvider>
+            {children}
+          </WaitlistProvider>
         </ThemeProvider>
       </body>
     </html>

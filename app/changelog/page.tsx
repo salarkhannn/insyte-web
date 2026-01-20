@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { GitCommit, Tag } from "@phosphor-icons/react/dist/ssr";
+import { Tag } from "@phosphor-icons/react/dist/ssr";
+import { Navbar } from "@/components/layout/navbar";
 
 export const metadata: Metadata = {
   title: "Changelog",
@@ -56,8 +57,10 @@ const changes = [
 
 export default function ChangelogPage() {
   return (
-    <main id="main-content" className="min-h-screen pt-32 pb-24 bg-chassis">
-      <article className="container mx-auto max-w-3xl px-6">
+    <>
+      <Navbar />
+      <main id="main-content" className="min-h-screen pt-32 pb-24 bg-chassis">
+        <article className="container mx-auto max-w-3xl px-6">
         {/* Header */}
         <header className="mb-20 text-center">
             <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-surface border border-primary/10">
@@ -105,7 +108,8 @@ export default function ChangelogPage() {
           ))}
 
         </div>
-      </article>
-    </main>
+        </article>
+      </main>
+    </>
   );
 }

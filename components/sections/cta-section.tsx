@@ -1,18 +1,23 @@
 "use client";
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { useWaitlist } from "@/components/waitlist-modal";
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mgoolqlw";
+
+const roles = [
+  "Data Analyst",
+  "Business Intelligence Developer",
+  "Data Scientist",
+  "Product Manager",
+  "Software Engineer",
+  "Founder / Executive",
+  "Student / Researcher",
+  "Other",
+];
 
 export function CTASection() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubmitted(true);
-    }
-  };
+  const { hasJoined, openModal } = useWaitlist();
 
   return (
     <section className="relative py-24 md:py-32 bg-chassis">
@@ -36,7 +41,7 @@ export function CTASection() {
               influence feature priorities, and receive launch updates.
             </p>
 
-            {submitted ? (
+            {hasJoined ? (
               <div className="inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-surface border border-signal/20">
                 <div className="w-3 h-3 rounded-full bg-signal shadow-[0_0_8px_var(--signal)]" />
                 <span className="text-primary font-sans">
@@ -44,20 +49,9 @@ export function CTASection() {
                 </span>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  required
-                  aria-label="Email address for waitlist"
-                  className="flex-1 h-12 px-4 rounded-xl bg-surface border border-primary/10 text-primary placeholder:text-tertiary focus:outline-none focus:ring-2 focus:ring-signal/30 focus:border-signal/50 font-sans"
-                />
-                <Button type="submit" className="h-12 px-6 whitespace-nowrap">
-                  Join Waitlist
-                </Button>
-              </form>
+              <Button onClick={openModal} className="h-12 px-8">
+                Join Waitlist
+              </Button>
             )}
           </div>
         </div>

@@ -1,7 +1,11 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { useWaitlist } from "@/components/waitlist-modal";
 
 export function Hero() {
+  const { openModal } = useWaitlist();
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-16 bg-chassis">
       {/* Background Grid/Noise */}
@@ -30,7 +34,7 @@ export function Hero() {
 
         {/* CTA Group */}
         <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
-          <Button variant="default" size="default">
+          <Button variant="default" size="default" onClick={openModal}>
             JOIN THE WAITLIST
           </Button>
           

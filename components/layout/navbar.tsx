@@ -7,9 +7,11 @@ import { Sun, Moon, GithubLogo, List, X } from "@phosphor-icons/react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { useWaitlist } from "@/components/waitlist-modal";
 
 export function Navbar() {
   const { theme, setTheme } = useTheme();
+  const { openModal } = useWaitlist();
   const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -95,6 +97,7 @@ export function Navbar() {
           <Button 
             variant="default"
             className="h-9 px-3 sm:px-4 lg:px-6 font-mono text-xs rounded-full whitespace-nowrap flex-shrink-0"
+            onClick={openModal}
           >
             Join Waitlist
           </Button>
